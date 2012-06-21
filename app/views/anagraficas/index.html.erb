@@ -1,0 +1,36 @@
+<h1>Listing anagraficas</h1>
+
+<table id="anagraficas" class="display">
+  <thead
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Login</th>
+    <th>Data</th>
+    <th>Indirizzo</th>
+    <th>Citta</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+<tbody>
+<% @anagraficas.each do |anagrafica| %>
+  <tr>
+    <td><%= anagrafica.nome %></td>
+     <td><%= anagrafica.email %></td>
+      <td><%= anagrafica.login %></td>
+    <td><%= anagrafica.data %></td>
+    <td><%= anagrafica.indirizzo %></td>
+    <td><%= anagrafica.citta %></td>
+    <td><%= link_to 'Show', anagrafica %></td>
+    <td><%= link_to 'Edit', edit_anagrafica_path(anagrafica) %></td>
+    <td><%= link_to 'Destroy', anagrafica, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Anagrafica', new_anagrafica_path %>

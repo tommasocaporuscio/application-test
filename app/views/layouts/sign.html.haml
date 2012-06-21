@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Xen Informatica
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
+    = csrf_meta_tag
+  %body
+    #container
+      #box
+        %div.block#block-login
+          %h2 Svi-Webdesign Application
+          %div.content.login
+            = yield

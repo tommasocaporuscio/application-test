@@ -1,0 +1,45 @@
+<%= form_for(@anagrafica) do |f| %>
+  <% if @anagrafica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anagrafica.errors.count, "error") %> prohibited this anagrafica from being saved:</h2>
+
+      <ul>
+      <% @anagrafica.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+<div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+<div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :indirizzo %><br />
+    <%= f.text_field :indirizzo %>
+  </div>
+  <div class="field">
+    <%= f.label :citta %><br />
+    <%= f.text_field :citta %>
+  </div>
+<div class="group">
+    <%= f.label :allegato_test_book, t("activerecord.attributes.summary_requirement.cover_image", :default => "Inserisci Allegato"), :class => :label %>
+    <%= f.file_field :allegato_test_book %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

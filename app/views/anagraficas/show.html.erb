@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @anagrafica.nome %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= @anagrafica.email %>
+</p>
+<p>
+  <b>Login:</b>
+  <%= @anagrafica.login %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @anagrafica.data %>
+</p>
+
+<p>
+  <b>Indirizzo:</b>
+  <%= @anagrafica.indirizzo %>
+</p>
+
+<p>
+  <b>Citta:</b>
+  <%= @anagrafica.citta %>
+</p>
+
+<p>
+         <b><%= t("activerecord.attributes.summary_requirement.allegato", :default => t("activerecord.labels.data", :default => "Allegato Inserito")) %>:</b>
+        <%=  @anagrafica.allegato_test_book.name  if @anagrafica.allegato_test_book_uid %>|| <%=link_to "Visualizza Allegato",@anagrafica.allegato_test_book.url  if @anagrafica.allegato_test_book_uid%>
+         </p>
+
+
+<%= link_to 'Edit', edit_anagrafica_path(@anagrafica) %> |
+<%= link_to 'Back', anagraficas_path %>

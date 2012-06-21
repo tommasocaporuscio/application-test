@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Benvenuto nel mio sito, <%= @anagrafica.nome %></h1>
+    <p>
+     È un gran sito,
+      il tuo nome è: <%= @anagrafica.login %>.<br/>
+    </p>
+    <p>
+      Per vederci clicca sul seguente link <%= @url %>.
+    </p>
+    <p>
+      La Tua imagine 
+      
+      <img src="http://localhost:3000<%=@anagrafica.allegato_test_book.url %>"></img>
+    </p>
+    <p>Grazie per aver riscontrato interesse nel mio sito!</p>
+  </body>
+</html>
